@@ -1,0 +1,117 @@
+/**
+ * @Contact.css
+ * Futuristic Contact section with glass card, direct outreach channels, and action buttons.
+ */
+
+.contact-section {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card-main {
+  background: linear-gradient(135deg, rgba(28, 16, 38, 0.85) 0%, rgba(18, 10, 26, 0.9) 100%);
+  border: 1px solid rgba(255, 120, 180, 0.25);
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(255, 120, 180, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.contact-channel-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(22, 13, 30, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text);
+  transition: all var(--transition-normal);
+}
+
+.contact-channel-item:hover {
+  background: rgba(42, 23, 58, 0.85);
+  border-color: var(--border-highlight);
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+.contact-channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 120, 180, 0.12);
+  border: 1px solid rgba(255, 120, 180, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pink);
+  flex-shrink: 0;
+}
+
+.contact-channel-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-channel-label {
+  font-size: 0.75rem;
+  color: var(--lavender-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.contact-channel-value {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-heading);
+  word-break: break-all;
+}
+
+/* Quick Note Form / Direct Message Box */
+.contact-actions-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: rgba(18, 10, 26, 0.5);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.contact-actions-heading {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.contact-actions-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.contact-btn-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}

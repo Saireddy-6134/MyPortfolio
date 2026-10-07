@@ -1,0 +1,154 @@
+/**
+ * @About.css
+ * Premium Bento Grid layout for the About section.
+ */
+
+.about-section {
+  position: relative;
+  z-index: 2;
+}
+
+.about-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Quote Card spans 2 columns */
+.about-quote-card {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(32, 18, 44, 0.75) 0%, rgba(20, 12, 28, 0.85) 100%);
+  border: 1px solid rgba(255, 120, 180, 0.25);
+}
+
+.about-quote-icon {
+  color: var(--pink);
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.about-quote-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-style: italic;
+  line-height: 1.45;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-wrap: balance;
+}
+
+.about-quote-author {
+  font-size: 0.875rem;
+  color: var(--pink-light);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-quote-author::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--pink);
+}
+
+/* Stats Card */
+.about-stats-card {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.25rem;
+  background: rgba(22, 13, 30, 0.7);
+}
+
+.about-stat-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-stat-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-stat-number {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.about-stat-number.highlight {
+  color: var(--pink-light);
+  text-shadow: 0 0 15px rgba(255, 120, 180, 0.4);
+}
+
+.about-stat-title {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Pillar Cards */
+.pillar-card {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.pillar-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-highlight);
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pillar-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pink-light);
+}
+
+.pillar-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 120, 180, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pink);
+}
+
+.pillar-text {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

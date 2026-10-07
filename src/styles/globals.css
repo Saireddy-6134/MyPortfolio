@@ -1,0 +1,78 @@
+@import "./theme.css";
+@import "./ui.css";
+@import "./animations.css";
+@import "./responsive.css";
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Custom Selection */
+::selection {
+  background: var(--pink);
+  color: #09070e;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09070e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(217, 92, 154, 0.35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 120, 180, 0.6);
+}
+
+/* Container Utility */
+.section-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 6.5rem 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cursor glow element */
+.cursor-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 120, 180, 0.07) 0%, rgba(192, 154, 255, 0.03) 45%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
